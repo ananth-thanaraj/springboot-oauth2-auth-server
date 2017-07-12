@@ -36,7 +36,7 @@ public class CustomClientDetailsServiceImpl implements ClientDetailsService {
 		client=document.getString("clientId");
 		String secret = document.getString("secret");
 		
-		Set<String> scope = new HashSet<String> ((List) document.get("scope"));
+		Set<String> scope = new HashSet<String> ((List) document.get("scopes"));
 		Set<String> authGrantTypes = new HashSet<String> ((List) document.get("authorizedGrantTypes"));
 		Integer accessTokenValidity = document.getInteger("accessTokenValidity");
 		Integer refreshTokenValidity = document.getInteger("refreshTokenValidity");

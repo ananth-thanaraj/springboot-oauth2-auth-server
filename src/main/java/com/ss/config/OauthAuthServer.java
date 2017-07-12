@@ -30,8 +30,6 @@ public class OauthAuthServer extends AuthorizationServerConfigurerAdapter{
 		return new CustomClientDetailsServiceImpl();
 	}
 	
-
-	
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 		endpoints.authenticationManager(authenticationManager);
@@ -48,13 +46,7 @@ public class OauthAuthServer extends AuthorizationServerConfigurerAdapter{
 		ClientDetailsService cls = clientDetaialsService();
 		
 		clients.withClientDetails(clientDetaialsService());
-		/*clients.inMemory()
-			.withClient("my-client")
-			.secret("password")
-			.authorizedGrantTypes("password","implicit")
-			.scopes("read","write","trust")
-			.accessTokenValiditySeconds(120)
-			.refreshTokenValiditySeconds(600);*/
+		
 	}
 
 }
