@@ -96,7 +96,7 @@ public class CustomClientDetails implements ClientDetails{
 	@Override
 	public boolean isAutoApprove(String arg0) {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override
