@@ -20,3 +20,9 @@ Steps to test in POSTMAN:
 3. Password
 
     http://localhost:8080/auth/oauth/token?grant_type=password&username=%username%&password=%password%
+    
+4. Implicit flow:
+
+    http://localhost:8080/auth/oauth/authorize?response_type=token&client_id=my-client&redirect_uri=http://example.com
+    
+    use the access token obtained in the re-direct uri to access the proteceted resources.
