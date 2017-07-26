@@ -1,5 +1,6 @@
 package com.ss;
 
+
 import java.security.Principal;
 
 import org.springframework.boot.SpringApplication;
@@ -17,8 +18,8 @@ public class SpringSecurityApplication {
 		SpringApplication.run(SpringSecurityApplication.class, args);
 	}
 	
-	@RequestMapping("/user")
-	public Principal user(Principal user){
+	@RequestMapping(value="/user")
+	Principal user(Principal user){
 		return user;
 	}
 }
